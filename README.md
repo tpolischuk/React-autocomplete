@@ -1,6 +1,8 @@
 
 ## Hypothesis Technical Assignment
 
+![Autocomplete Demo](https://i.imgur.com/kVBRzIX.gif)
+
 This project is an implementation of a theoretical @mention system for the
 Hypothesis commenting ecosystem. It was built as a re-usable react component
 that can be imported and used in existing webapps that use react.
