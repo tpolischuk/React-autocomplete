@@ -25,6 +25,8 @@ Start the local web server
 
 Navigate to http://localhost:3000/ in your browser to view the demo.
 
+*Note, this was built using Node v11.9.0 and npm v6.5.0*
+
 ### Usage
 
 Import the Comments component included in the project.
