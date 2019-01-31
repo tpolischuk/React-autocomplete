@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.comments {
+  width: 80%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.commentBox {
+    margin-bottom: 15px;
+}
+
+div.commentBox__control {
+  font-size: 18px !important;
+}
+
+.comments-title {
+  text-align: left;
+}
+
+.commentBox__suggestions {
+  margin-left: -250px;
+}
+
+.commentBox__suggestions__item {
+  color: black;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.commentBox__suggestions__item .user {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+button {
+  padding: 15px;
+  background-color: teal;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.gravatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.user {
+  text-align: left;
+}
