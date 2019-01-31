@@ -16,4 +16,21 @@ code {
 .comments {
   width: 500px;
   height: 200px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comments-title {
+  text-align: left;
+}
+
+button {
+  padding: 15px;
+  background-color: teal;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  float: left;
 }
