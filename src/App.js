@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Comments from './components/comments';
-import usernameData from './components/usernamedata';
+import Comments from './components/comments/comments';
+import usernameData from './components/comments/usernamedata';
 import './App.css';
 
 const users = usernameData

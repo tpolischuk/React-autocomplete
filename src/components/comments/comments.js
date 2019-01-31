@@ -8,6 +8,7 @@ import defaultStyle from './defaultStyle'
 import defaultMentionStyle from './defaultMentionStyle'
 
 function Comments({ value, data, onChange, onAdd }) {
+
   let style = merge({}, defaultStyle, {
     input: {
       overflow: 'auto',
@@ -17,34 +18,36 @@ function Comments({ value, data, onChange, onAdd }) {
 
   return (
     <div className="comments">
-      <h3>Hypothesis Comments</h3>
-
+      <h3 className="comments-title">Hypothesis Comments</h3>
       <MentionsInput
         value={value}
         onChange={onChange}
         className="commentBox"
         style={style}
-        markup="@[__display__](__type__:__id__)"
+        markup="@[__id__](__type__:__id__)"
         placeholder={"Mention people using '@'"}
       >
         <Mention
           type="user"
           trigger="@"
           data={data}
-          renderSuggestion={(suggestion, search, highlightedDisplay) => (
-            <div className="user">{highlightedDisplay}</div>
+          renderSuggestion={(suggestion, search, highlightedDisplay, index) => (
+            <div className="user">
+              <img className="gravatar" src={data[index].avatar_url} alt="gravatar" />
+              {highlightedDisplay}
+            </div>
           )}
           onAdd={onAdd}
           style={defaultMentionStyle}
         />
       </MentionsInput>
-      <button>Submit</button>
+      <button onClick={function() {alert('Thank you for your comment!')}}>Submit</button>
     </div>
   )
 }
 
 const asExample = provideExampleValue(
-  "Use the @ to mention other users in your comment"
+  ""
 )
 
 export default asExample(Comments)

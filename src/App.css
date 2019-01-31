@@ -22,11 +22,57 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.comments {
+  width: 80%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.commentBox {
+    margin-bottom: 15px;
+}
+
+div.commentBox__control {
+  font-size: 18px !important;
+}
+
+.comments-title {
+  text-align: left;
+}
+
+.commentBox__suggestions {
+  margin-left: -250px;
+}
+
+.commentBox__suggestions__item {
+  color: black;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+.commentBox__suggestions__item .user {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+button {
+  padding: 15px;
+  background-color: teal;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.gravatar {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.user {
+  text-align: left;
 }
