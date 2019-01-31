@@ -1,6 +1,8 @@
 
 ## Hypothesis Technical Assignment
 
+![Autocomplete Demo](https://i.imgur.com/kVBRzIX.gif)
+
 This project is an implementation of a theoretical @mention system for the
 Hypothesis commenting ecosystem. It was built as a re-usable react component
 that can be imported and used in existing webapps that use react.
@@ -24,6 +26,8 @@ Start the local web server
 `npm start`
 
 Navigate to http://localhost:3000/ in your browser to view the demo.
+
+*Note, this was built using Node v11.9.0 and npm v6.5.0*
 
 ### Usage
 
@@ -58,3 +62,10 @@ Import your data from a remote or local source:
       <div>
     );
   }`
+
+### Testing
+
+Basic rendering tests can be ran using:
+`npm test`
+
+![Example Test](https://i.imgur.com/nk3yhon.png)
