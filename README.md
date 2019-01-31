@@ -62,3 +62,10 @@ Import your data from a remote or local source:
       <div>
     );
   }`
+
+### Testing
+
+Basic rendering tests can be ran using:
+`npm test`
+
+![Example Test](https://i.imgur.com/nk3yhon.png)
