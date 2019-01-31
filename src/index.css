@@ -14,14 +14,31 @@ code {
 }
 
 .comments {
-  width: 500px;
-  height: 200px;
+  width: 800px;
   display: block;
   margin-bottom: 30px;
 }
 
+.commentBox {
+    margin-bottom: 15px;
+}
+
 .comments-title {
   text-align: left;
+}
+
+.commentBox__suggestions {
+  margin-left: -200px;
+}
+
+.commentBox__suggestions__item {
+  color: black;
+  font-size: 16px;
+}
+
+.commentBox__suggestions__item .user {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 button {

@@ -1,28 +1,50 @@
 import React from 'react'
+import { merge } from 'lodash'
+import { Mention, MentionsInput } from 'react-mentions'
 
-class Comments extends React.Component {
+import { provideExampleValue } from './higher-order'
 
-  handleChange = (event) => {
-    if (event.key == "@") {
-      // Do Autocomplete Lookup
-    }
-  }
+import defaultStyle from './defaultStyle'
+import defaultMentionStyle from './defaultMentionStyle'
 
-  handleSubmit = () => {
-    //Handle Submit
-  }
+function Comments({ value, data, onChange, onAdd }) {
+  let style = merge({}, defaultStyle, {
+    input: {
+      overflow: 'auto',
+      height: 300,
+    },
+  })
 
+  return (
+    <div className="comments">
+      <h3>Hypothesis Comments</h3>
 
-  render() {
-    return (
-      <div>
-        <h2 className="comments-title">Comments: </h2>
-        <textarea className="auto-complete comments" onKeyDown={this.handleChange}>
-        </textarea>
-        <button onClick={this.handleSubmit}>Submit</button>
-      </div>
-    )
-  }
+      <MentionsInput
+        value={value}
+        onChange={onChange}
+        className="commentBox"
+        style={style}
+        markup="@[__display__](__type__:__id__)"
+        placeholder={"Mention people using '@'"}
+      >
+        <Mention
+          type="user"
+          trigger="@"
+          data={data}
+          renderSuggestion={(suggestion, search, highlightedDisplay) => (
+            <div className="user">{highlightedDisplay}</div>
+          )}
+          onAdd={onAdd}
+          style={defaultMentionStyle}
+        />
+      </MentionsInput>
+      <button>Submit</button>
+    </div>
+  )
 }
 
-export default Comments
+const asExample = provideExampleValue(
+  "Use the @ to mention other users in your comment"
+)
+
+export default asExample(Comments)
