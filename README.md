@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Hypothesis Technical Assignment
 
-In the project directory, you can run:
+This project is an implementation of a theoretical @mention system for the
+Hypothesis commenting ecosystem. It was built as a re-usable react component
+that can be imported and used in existing webapps that use react.
 
-### `npm start`
+The underlying library used to power the suggestion system is: https://github.com/signavio/react-mentions
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installing the project locally
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Clone the repository onto your local computer:
 
-### `npm test`
+`git clone git@github.com:tpolischuk/hypothesis-autocomplete.git hypothesis-autocomplete`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the dependencies
 
-### `npm run build`
+`cd hypothesis-autocomplete`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm install`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Start the local web server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm start`
 
-### `npm run eject`
+Navigate to http://localhost:3000/ in your browser to view the demo.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Import the Comments component included in the project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`import Comments from './components/comments/comments';`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Import your data from a remote or local source:
 
-## Learn More
+`const users = [{
+    "id": "pturner0",
+    "avatar_url": "https://secure.gravatar.com/avatar/cd4318b7fb1cf64648f59198aca8757f?d=mm",
+    "display": "Paula Turner"
+  },
+  {
+    "id": "pdixon1",
+    "avatar_url": "https://secure.gravatar.com/avatar/be09ed96613495dccda4eeffc4dd2daf?d=mm",
+    "display": "Patrick Dixon"
+  },
+  {
+    "id": "mhansen2",
+    "avatar_url": "https://secure.gravatar.com/avatar/15442f219c2c472e0f1572aacc1cdfd7?d=mm",
+    "display": "Michael Hansen"
+  }]`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  Then load the comment component in your render method
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  `render() {
+    return (
+      <div>
+        <Comments data={users} />
+      <div>
+    );
+  }`
