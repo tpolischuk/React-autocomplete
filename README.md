@@ -1,6 +1,5 @@
 
-## Hypothesis Technical Assignment
-
+## React autocomplete component for textareas
 ![Autocomplete Demo](https://i.imgur.com/kVBRzIX.gif)
 
 This project is an implementation of a theoretical @mention system for the
